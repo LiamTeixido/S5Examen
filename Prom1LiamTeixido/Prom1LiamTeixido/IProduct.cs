@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prom1LiamTeixido
 {
-    class Program
+    public interface IProduct
     {
-        static void Main(string[] args)
-        {
-
-        }
+        string GetFeatures();
+        int GetPrice();
     }
 }
