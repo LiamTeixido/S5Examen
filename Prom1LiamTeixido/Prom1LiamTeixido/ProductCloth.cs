@@ -6,32 +6,36 @@ using System.Threading.Tasks;
 
 namespace Prom1LiamTeixido
 {
-    class ProductCloth : IProduct, IMaterial
+    public class ProductCloth : Product, IMaterial
     {
         private string name;
         private int size;
         private string color;
         private int price;
+        private string material;
+        private int weight;
 
-        public ProductCloth(string name, int size, string color, int price)
+        public ProductCloth(string name, int size, string color, int price, string material, int weight)
         {
             this.name = name;
             this.size = size;
             this.color = color;
             this.price = price;
+            this.weight = weight;
+            this.material = material;
         }
 
-        public string GetFeatures()
+        public override string GetFeatures()
         {
-            return $"Nombre: {name}, Tamaño: {size}, Color: {color}, Precio: {price}";
+            return $"Nombre: {name}, Tamaño: {size}, Color: {color}, Precio: {price}, Peso: {weight}, Material: {material}";
         }
 
-        public string GetName()
+        public override string GetName()
         {
-            return "Tela";
+            return name; 
         }
 
-        public int GetPrice()
+        public override int GetPrice()
         {
             return price;
         }
