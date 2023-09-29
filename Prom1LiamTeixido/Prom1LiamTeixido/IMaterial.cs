@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Prom1LiamTeixido
 {
-    class Program
+    public interface IMaterial
     {
-        static void Main(string[] args)
-        {
-
-        }
+        string GetName();
     }
 }
